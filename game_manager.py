@@ -42,7 +42,7 @@ class GameManager:
         :return: None
         """
         self.size = canvas_size
-        self.screen = pygame.display.set_mode((0, 0), self.size)
+        self.screen = pygame.display.set_mode((0, 0), self.size, pygame.HWSURFACE | pygame.DOUBLEBUF)
         self.clock = pygame.time.Clock()
 
         self.balls = BallPool()
